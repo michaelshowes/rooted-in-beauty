@@ -27,7 +27,8 @@
       "@data/*": ["./src/data/*"],
       "@api/*": ["./src/pages/api/*"],
       "@styles/*": ["./src/styles/*"],
-      "@pages/*": ["./src/pages/*"]
+      "@pages/*": ["./src/pages/*"],
+      "@layout/*": ["./src/layout/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

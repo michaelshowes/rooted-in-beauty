@@ -1,10 +1,10 @@
-export default async function getSiteDetails() {
-  const res = await fetch(process.env.WORDPRESS_LOCAL_API_URL, {
+export default async function meta() {
+  const res = await fetch(process.env.WORDPRESS_API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       query: `
-        query getSiteDetails {
+        query meta {
           generalSettings {
             url
             title
@@ -17,7 +17,7 @@ export default async function getSiteDetails() {
     throw new Error('Failed to fetch data');
   }
   const json = await res.json(),
-        details = json.data.generalSettings;
+    data = json.data.generalSettings;
 
-  return details;
+  return data;
 }

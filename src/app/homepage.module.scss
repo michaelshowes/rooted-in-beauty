@@ -1,0 +1,9 @@
+.homepage {
+
+  section {
+
+    &:nth-child(odd) {
+      background-color: hsl(90, 10%, 94%);
+    }
+  }
+}

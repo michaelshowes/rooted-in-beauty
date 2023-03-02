@@ -1,0 +1,16 @@
+@use '../../styles/mixins' as *;
+
+.blogTeaser {
+  padding: 80px 0;
+  
+  .inner {
+    @include content-constraint(1400px);
+    width: 90%;
+  }
+
+  .teaserCards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}

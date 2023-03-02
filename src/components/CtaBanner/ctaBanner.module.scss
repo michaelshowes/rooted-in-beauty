@@ -1,0 +1,51 @@
+@use '../../styles/mixins' as *;
+
+.ctaBanner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  padding: 80px 0;
+  isolation: isolate;
+
+  .image {
+    @include absolute(0, 0, 0, 0);
+    height: 100%;
+    z-index: -1;
+
+    &::before {
+      @include absolute(0, 0, 0, 0);
+      content: '';
+      background-color: rgba(black, .75);
+      backdrop-filter: blur(4px);
+      z-index: 1;
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    color: white;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  .link {
+    color: white;
+    background-color: #889696;
+    padding: 14px 20px;
+    margin-top: 40px;
+    border: 1px solid white;
+  }
+}

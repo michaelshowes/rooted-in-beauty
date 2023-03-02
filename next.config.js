@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true,
+    appDir: true
   },
   // Enables support for importing SVGs as components
   webpack(config) {
@@ -14,7 +14,7 @@ const nextConfig = {
     config.experiments = {
       ...config.experiments,
       topLevelAwait: true
-    }
+    };
     return config;
   },
   images: {
@@ -23,8 +23,9 @@ const nextConfig = {
       {
         hostname: 'localhost'
       }
-    ]
+    ],
+    domains: ['images.pexels.com']
   }
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

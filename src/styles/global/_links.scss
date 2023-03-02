@@ -8,7 +8,7 @@ a {
   transition: $ts $te;
 
   @include hover {
-    color: red;
+    color: rebeccapurple;
   }
 
   &:disabled,

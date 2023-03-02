@@ -1,3 +1,5 @@
+import Footer from '@layout/Footer/Footer';
+import Header from '@layout/Header/Header';
 import { Inter } from '@next/font/google';
 import '@styles/main.scss';
 
@@ -15,7 +17,13 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        {/* @ts-expect-error Server Component */}
+        <Header />
+        {children}
+        {/* @ts-expect-error Server Component */}
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -1,0 +1,31 @@
+@use '../../styles/mixins' as *;
+
+.sectionHeader {
+  margin-bottom: 30px;
+
+  h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 46px;
+    margin: 0 0 14px;
+    isolation: isolate;
+
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      background-color: hsl(270, 50%, 60%);
+      width: 60%;
+      height: 20px;
+      z-index: -1;
+    }
+  }
+
+  span {
+    color: rebeccapurple;
+  }
+
+  p {
+    max-width: 400px;
+  }
+}

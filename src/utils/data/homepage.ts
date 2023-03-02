@@ -1,10 +1,10 @@
-export default async function getHomepage() {
-  const res = await fetch(process.env.WORDPRESS_LOCAL_API_URL, {
+export default async function homepage() {
+  const res = await fetch(process.env.WORDPRESS_API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       query: `
-        query getHomepage {
+        query homepage {
           page(id: "/", idType: URI) {
             slug
             title
@@ -18,7 +18,7 @@ export default async function getHomepage() {
     throw new Error('Failed to fetch data');
   }
   const json = await res.json(),
-    pages = json.data.page;
+    data = json.data.page;
 
-  return pages;
+  return data;
 }

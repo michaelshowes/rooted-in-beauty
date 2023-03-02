@@ -1,0 +1,51 @@
+@use '../../styles/mixins' as *;
+
+.card {
+  background-color: white;
+  box-shadow: 0 0 16px 0 rgba(black, .1);
+  height: max-content;
+  max-width: 400px;
+  padding: 12px 12px 32px;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+
+  @include hover {
+    transform: translateY(-10px);
+
+    .image {
+
+      img {
+        scale: 1.2;
+      }
+    }
+
+    h3 {
+      color: rebeccapurple;
+    }
+  }
+
+  h3 {
+    transition: .2s ease-in-out;
+  }
+
+  .image {
+    position: relative;
+    height: 220px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    
+    img {
+      object-fit: cover;
+      transition: .2s ease-in-out;
+    }
+  }
+
+  .teaserText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    margin-bottom: 10px;
+  }
+}

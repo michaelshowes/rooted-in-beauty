@@ -1,0 +1,40 @@
+@use '../../styles//mixins' as *;
+
+.header {
+  // position: fixed;
+  // display: flex;
+  align-items: center;
+  width: 100vw;
+  // color: white;
+  background-color: hsl(90, 10%, 94%);
+  padding: 50px 30px;
+  text-align: center;
+  z-index: 999;
+  transition: 0.2s ease-in-out;
+
+  .logo {
+    width: 400px;
+    margin: 20px auto 30px;
+
+    svg {
+      
+      path {
+        fill: rebeccapurple;
+        opacity: .8;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    li {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+}
