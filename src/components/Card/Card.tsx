@@ -8,8 +8,8 @@ type Props = {
   title: string;
   text: string;
   url: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
 };
 
 export default function Card({
@@ -24,7 +24,7 @@ export default function Card({
   return (
     <article className={scss.card}>
       <div className={scss.image}>
-        <Image src={image} alt={altText} fill width={width} height={height} />
+        <Image src={image} alt={altText} width={width} height={height} />
       </div>
       <h3>{title}</h3>
       <p className={scss.teaserText}>{text}</p>
